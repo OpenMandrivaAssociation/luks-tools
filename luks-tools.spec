@@ -1,13 +1,18 @@
 Summary: Utilities for working with LUKS-protected filesystems
 Name: luks-tools
-Version: 0.0.11
+Version: 0.0.12
 Release: %mkrel 1
 License: GPL
 Group: File tools
-Source: http://www.flyn.org/projects/%name/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Source0: http://www.flyn.org/projects/%name/%{name}-%{version}.tar.bz2
+# (fc) 0.0.12-1mdv fix pam-stack deprecated usage
+Patch0: luks-tools-0.0.12-fixpamstack.patch
+# (fc) 0.0.12-1mdv fix consolehelper file
+Patch1: luks-tools-0.0.12-fixconsolehelper.patch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 URL: http://www.flyn.org
 Requires: cryptsetup-luks
+Requires: usermode
 BuildRequires: cryptsetup-luks
 
 %description
@@ -36,6 +41,8 @@ gnome-luks-format
 
 %prep
 %setup -q
+%patch0 -p1 -b .fixpamstack
+%patch1 -p1 -b .fixconsolehelper
 
 %build
 PATH="$PATH:/sbin" %configure2_5x
@@ -43,8 +50,10 @@ PATH="$PATH:/sbin" %configure2_5x
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 
+mv $RPM_BUILD_ROOT%{_bindir}/gnome-luks-format $RPM_BUILD_ROOT%{_sbindir}/gnome-luks-format 
+ln -s consolehelper $RPM_BUILD_ROOT%{_bindir}/gnome-luks-format 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,6 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog INSTALL NEWS README FAQ
+%{_sysconfdir}/pam.d/*
+%{_sysconfdir}/security/console.apps/*
 %{_datadir}/luks-tools/*
 %{_bindir}/*
 %{_sbindir}/*
