@@ -14,6 +14,8 @@ URL: http://www.flyn.org
 Requires: cryptsetup-luks
 Requires: usermode
 BuildRequires: cryptsetup-luks
+BuildRequires: glib2-devel
+BuildRequires: libext2fs-devel
 
 %description
 The luks-tools package contains various utilities for working with 
