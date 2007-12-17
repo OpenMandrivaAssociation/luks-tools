@@ -9,7 +9,6 @@ Source0: http://www.flyn.org/projects/%name/%{name}-%{version}.tar.bz2
 Patch0: luks-tools-0.0.12-fixpamstack.patch
 # (fc) 0.0.12-1mdv fix consolehelper file
 Patch1: luks-tools-0.0.12-fixconsolehelper.patch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 URL: http://www.flyn.org
 Requires: cryptsetup-luks
 Requires: usermode
