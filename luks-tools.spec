@@ -1,7 +1,7 @@
 Summary: Utilities for working with LUKS-protected filesystems
 Name: luks-tools
 Version: 0.0.12
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPL
 Group: File tools
 Source0: http://www.flyn.org/projects/%name/%{name}-%{version}.tar.bz2
@@ -13,6 +13,10 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 URL: http://www.flyn.org
 Requires: cryptsetup-luks
 Requires: usermode
+# These three are needed for gnome-luks-format - AdamW 2008/02
+Requires: python-dbus
+Requires: pygtk2.0
+Requires: pygtk2.0-libglade
 BuildRequires: cryptsetup-luks
 BuildRequires: glib2-devel
 BuildRequires: libext2fs-devel
