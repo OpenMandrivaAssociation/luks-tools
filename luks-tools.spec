@@ -1,10 +1,10 @@
 Summary: Utilities for working with LUKS-protected filesystems
 Name: luks-tools
-Version: 0.0.12
-Release: %mkrel 4
+Version: 0.0.13
+Release: %mkrel 1
 License: GPL
 Group: File tools
-Source0: http://www.flyn.org/projects/%name/%{name}-%{version}.tar.bz2
+Source0: http://www.flyn.org/projects/%name/%{name}-%{version}.tar.gz
 # (fc) 0.0.12-1mdv fix pam-stack deprecated usage
 Patch0: luks-tools-0.0.12-fixpamstack.patch
 # (fc) 0.0.12-1mdv fix consolehelper file
