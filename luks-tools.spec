@@ -1,7 +1,7 @@
 Summary: Utilities for working with LUKS-protected filesystems
 Name: luks-tools
 Version: 0.0.13
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPL
 Group: File tools
 Source0: http://www.flyn.org/projects/%name/%{name}-%{version}.tar.gz
