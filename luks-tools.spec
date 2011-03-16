@@ -19,7 +19,7 @@ Requires: pygtk2.0
 Requires: pygtk2.0-libglade
 BuildRequires: cryptsetup-luks
 BuildRequires: glib2-devel
-BuildRequires: libext2fs-devel
+BuildRequires: libuuid-devel
 
 %description
 The luks-tools package contains various utilities for working with 
