@@ -1,0 +1,8 @@
+--- luks-tools-0.0.12/console.apps/gnome-luks-format.fixconsolehelper	2007-05-21 16:29:44.000000000 +0200
++++ luks-tools-0.0.12/console.apps/gnome-luks-format	2007-05-21 16:29:53.000000000 +0200
+@@ -1,4 +1,4 @@
+ # /etc/security/console.apps/gnome-luks-format
+ USER=root
+-PROGRAM=/usr/local/bin/gnome-luks-format.py
++PROGRAM=/usr/sbin/gnome-luks-format
+ SESSION=true

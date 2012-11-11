@@ -1,0 +1,11 @@
+--- luks-tools-0.0.12/pam/gnome-luks-format.pamstack	2007-05-21 16:28:11.000000000 +0200
++++ luks-tools-0.0.12/pam/gnome-luks-format	2007-05-21 16:28:29.000000000 +0200
+@@ -2,7 +2,7 @@
+ # /etc/pam.d/gnome-luks-format
+ auth       sufficient	pam_rootok.so
+ auth       sufficient   pam_timestamp.so
+-auth       required	pam_stack.so service=system-auth
++auth       include	system-auth
+ session	   required	pam_permit.so
+ session    optional	pam_xauth.so
+ session    optional     pam_timestamp.so
