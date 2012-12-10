@@ -74,3 +74,46 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_sbindir}/*
 %{_mandir}/man*/*
+
+
+%changelog
+* Wed Mar 16 2011 Funda Wang <fwang@mandriva.org> 0.0.14-1mdv2011.0
++ Revision: 645379
+- BR uuid
+
+  + Stéphane Téletchéa <steletch@mandriva.org>
+    - update to new version 0.0.14
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - the mass rebuild of 2010.0 packages
+
+* Thu Jul 30 2009 Frederic Crozat <fcrozat@mandriva.com> 0.0.13-1mdv2010.0
++ Revision: 404628
+- Release 0.0.13
+
+* Mon Jul 28 2008 Thierry Vignaud <tv@mandriva.org> 0.0.12-4mdv2009.0
++ Revision: 251556
+- rebuild
+
+* Wed Feb 27 2008 Adam Williamson <awilliamson@mandriva.org> 0.0.12-2mdv2008.1
++ Revision: 175941
+- add some requires without which gnome-luks-format doesn't work
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Tue May 29 2007 Frederic Crozat <fcrozat@mandriva.com> 0.0.12-1mdv2008.0
++ Revision: 32551
+- Fix buildrequires
+- Release 0.0.12
+- Patch0: fix pam-stack obsolete usage
+- Patch1: fix consolehelper/usermode usage
+- Import luks-tools
+
+
+
+* Mon Sep 11 2006 Frederic Crozat <fcrozat@mandriva.com> 0.0.11-1mdv2007.0
+- Initial Mandriva release
