@@ -17,6 +17,7 @@ Requires: usermode
 Requires: python-dbus
 Requires: pygtk2.0
 Requires: pygtk2.0-libglade
+BuildRequires:	make
 BuildRequires: cryptsetup-luks
 BuildRequires: glib2-devel
 BuildRequires: libuuid-devel
